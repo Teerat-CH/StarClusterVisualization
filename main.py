@@ -81,5 +81,5 @@ st.write(" ")
 st.write('- CSV file of Messier13, NGC2420, and NGC6791 can be found here: [link](https://drive.google.com/drive/folders/1-Xi4bIYWrpwXzEk2fneYXKSjzAAkP7sw?usp=sharing)')
 
 st.write(" ")
-st.write("- StarClusterPlot Package pypi.org: [link](https://pypi.org/manage/project/starclusterplot/releases/)")
+st.write("- StarClusterPlot Package pypi.org: [link](https://pypi.org/project/StarClusterPlot/0.1.7/)")
 st.write('-------------------------------------------------------------------------------')
