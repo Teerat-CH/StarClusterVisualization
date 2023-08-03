@@ -66,11 +66,11 @@ st.code(code1, language='python')
 st.write("3.Read data file")
 st.code("data = pd.read_csv('M13.csv')", language='python')
 
-st.write("4.Plot Star Clusters structure")
-st.code("ClusterVis(data)", language='python')
+st.write("4.Plot Star Clusters structure; all parameters apart from the dataframe (data) are optional")
+st.code("ClusterVis(data, x_scale, y_scale)", language='python')
 
-st.write("5.Plot Star Clusters HR-Diagram")
-st.code("HRDiagram(data)", language='python')
+st.write("5.Plot Star Clusters HR-Diagram; all parameters apart from the dataframe (data) are optional")
+st.code("HRDiagram(data, left_boun, right_boun, lower_boun, upper_boun, x_scale, y_scale)", language='python')
 
 st.write('-------------------------------------------------------------------------------')
 st.write(" ")
