@@ -48,7 +48,7 @@ if HR:
     fig = HRDiagram(data, left_boun, right_boun, lower_boun, upper_boun, x_scale_HR, y_scale_HR)
     st.pyplot(fig)
 
-st.write("----------------------------------------------------------------------------------------")
+st.write('-------------------------------------------------------------------------------')
 
 st.write("""
 ## Tutorial
@@ -58,7 +58,7 @@ st.write("1.Install the Package")
 st.code('!pip install StarClusterPlot==0.1.7', language='python')
 
 st.write("2.Import package and required libraries")
-code1 = """Import pandas as pd
+code1 = """import pandas as pd
 from matplotlib import pyplot as plt
 from StarClusterPlot import ClusterVis, HRDiagram"""
 st.code(code1, language='python')
@@ -72,6 +72,14 @@ st.code("ClusterVis(data)", language='python')
 st.write("5.Plot Star Clusters HR-Diagram")
 st.code("HRDiagram(data)", language='python')
 
-st.write("If you wish to investigate other star clusters, check out this Sloan Digital Sky Survey tutorial. [link](https://skyserver.sdss.org/dr12/en/proj/advanced/hr/mast.aspx)")
-st.write('After importing the data as a csv file, simply delete the first row, and you should be good to go!')
+st.write('-------------------------------------------------------------------------------')
+st.write(" ")
+st.write("- If you wish to investigate other star clusters, check out this Sloan Digital Sky Survey tutorial. [link](https://skyserver.sdss.org/dr12/en/proj/advanced/hr/mast.aspx)")
+st.write('After importing the data as a CSV file, simply delete the first row, and you should be good to go!')
+
+st.write(" ")
+st.write('- CSV file of Messier13, NGC2420, and NGC6791 can be found here: [link](https://drive.google.com/drive/folders/1-Xi4bIYWrpwXzEk2fneYXKSjzAAkP7sw?usp=sharing)')
+
+st.write(" ")
+st.write("- StarClusterPlot Package pypi.org: [link](https://pypi.org/manage/project/starclusterplot/releases/)")
 st.write('-------------------------------------------------------------------------------')
