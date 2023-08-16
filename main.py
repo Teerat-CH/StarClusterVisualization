@@ -1,9 +1,11 @@
 import pandas as pd
 import streamlit as st
-from StarClusterPlot import ClusterVis, HRDiagram
+from matplotlib import pyplot as plt, patches, ticker as ticker
+from StarClusterPlot import ClusterVis, HRDiagram, Temp_to_RGB
 
 st.sidebar.title("Options")
 option = st.sidebar.radio("Select Page", ["Home", "Interactive Plots", "Package Tutorial", "Technical Documentation"])
+st.sidebar.divider()
 
 if option == "Home":
     st.title("StarClusterPlot")
@@ -54,6 +56,23 @@ if option == "Interactive Plots":
         st.pyplot(fig)
         st.divider()
 
+    st.sidebar.divider()
+    temp_color_plot = st.sidebar.checkbox("Star's Temperature-Color plot", False)
+
+    if temp_color_plot:
+        temp = st.slider("Temperature", 1667, 25000, 4000, 1)
+        color = Temp_to_RGB(temp)
+        plt.rcParams["figure.figsize"] = [5, 5]
+        plt.rcParams['axes.facecolor'] = '#353535'
+        fig = plt.figure()
+        ax = fig.add_subplot()
+        circle1 = patches.Circle((0, 0), radius=0.5, color=color)
+        ax.add_patch(circle1)
+        ax.set(xlim=(-1, 1), ylim=(-1,1))
+        ax.xaxis.set_major_locator(ticker.NullLocator())
+        ax.yaxis.set_major_locator(ticker.NullLocator())
+        st.pyplot(fig)
+
 if option == "Package Tutorial":
     st.title("Package Tutorial")
 
@@ -64,17 +83,20 @@ if option == "Package Tutorial":
     code1 = """
     import pandas as pd
     from matplotlib import pyplot as plt
-    from StarClusterPlot import ClusterVis, HRDiagram"""
+    from StarClusterPlot import ClusterVis, HRDiagram, Temp_to_RGB"""
     st.code(code1, language='python')
 
     st.write("3.Read data file")
     st.code("data = pd.read_csv('M13.csv')", language='python')
 
-    st.write("4.Plot Star Clusters structure; all parameters apart from the dataframe (data) are optional")
+    st.write("- Plot Star Clusters structure; all parameters apart from the dataframe (data) are optional")
     st.code("ClusterVis(data, x_ratio, y_ratio)", language='python')
 
-    st.write("5.Plot Star Clusters HR-Diagram; all parameters apart from the dataframe (data) are optional")
+    st.write("- Plot Star Clusters HR-Diagram; all parameters apart from the dataframe (data) are optional")
     st.code("HRDiagram(data, left_boun, right_boun, lower_boun, upper_boun, x_ratio, y_ratio)", language='python')
+
+    st.write("- Convert Temperature in Kelvin to RGB; 1667K < Temperature < 25000K")
+    st.code("Temp_to_RGB(Temperature)", language='python')
 
     st.divider()
     st.write(" ")

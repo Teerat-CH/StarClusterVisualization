@@ -1,5 +1,5 @@
 matplotlib==3.7.2
 numpy==1.25.2
 pandas==2.0.3
-StarClusterPlot==0.1.7
+StarClusterPlot==0.1.8
 streamlit==1.25.0
