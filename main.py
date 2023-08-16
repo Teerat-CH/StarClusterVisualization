@@ -104,7 +104,7 @@ if option == "Package Tutorial":
     st.write('After importing the data as a CSV file, simply delete the first row, and you should be good to go!')
 
     st.write(" ")
-    st.write('- CSV file of Messier13, NGC2420, and NGC6791 can be found here: [link](https://drive.google.com/drive/folders/1-Xi4bIYWrpwXzEk2fneYXKSjzAAkP7sw?usp=sharing)')
+    st.write('- CSV file of Messier13, NGC2420, and NGC6791 can be found here: [link](https://github.com/Milne-Centre/ThaiPASS2019/tree/master/DATA_FOR_TASKS)')
 
     st.write(" ")
     st.write("- StarClusterPlot Package pypi.org: [link](https://pypi.org/project/StarClusterPlot/0.1.7/)")
@@ -127,6 +127,7 @@ if option == "Technical Documentation":
         B = g + 0.3130(g-r) + 0.2271 \\
         V = g - 0.5784(g-r) - 0.0038
     ''')
+    st.write("[Source](https://www.sdss3.org/dr8/algorithms/sdssUBVRITransform.php)")
     st.markdown("#")
 
     '''
@@ -135,6 +136,7 @@ if option == "Technical Documentation":
     st.latex(r'''
         Temperature = 4600(K)× (\frac{1}{0.92 (B-V) + 0.17} + \frac{1}{0.92 (B-V) + 0.62})
     ''')
+    st.write("[Source](https://en.wikipedia.org/wiki/Color_index)")
     st.markdown("#")
 
     '''
@@ -156,6 +158,7 @@ if option == "Technical Documentation":
         \end{array}
         \right.
     ''')
+    st.write("[Source](https://en.wikipedia.org/wiki/Planckian_locus#Approximation)")
     st.markdown("#")
 
     '''
@@ -166,6 +169,7 @@ if option == "Technical Documentation":
         X = \frac{Y}{y}x \\
         Z = \frac{Y}{y}(1-x-y)
     ''')
+    st.write("[Source](https://en.wikipedia.org/wiki/CIE_1931_color_space#CIE_xy_chromaticity_diagram_and_the_CIE_xyY_color_space)")
     st.markdown("#")
 
     '''
@@ -190,6 +194,7 @@ if option == "Technical Documentation":
         Z
         \end{bmatrix}
     ''')
+    st.write("[Source](https://www.cs.rit.edu/~ncs/color/t_convert.html#RGB%20to%20XYZ%20&%20XYZ%20to%20RGB)")
 
     st.divider()
 
