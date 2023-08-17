@@ -8,7 +8,7 @@ option = st.sidebar.radio("Select Page", ["Home", "Interactive Plots", "Package 
 
 if option == "Home":
     st.title("StarClusterPlot")
-    st.write("[StarClusterPlot](https://pypi.org/project/StarClusterPlot/0.1.7/) is a Python package created and maintained by [Teerat Chanromyen](https://cosmicdusts.wordpress.com/about/) that helps visualize a star cluster's structure and its Hertzsprung-Russell Diagram with real, calculated color. It is specifically designed to work with data from the [Sloan Digital Sky Survey](https://www.sdss.org/) or any dataset that contains g, r, right ascension, and declination values. This site served as a documentation hub, featuring examples of interactive plots, a package tutorial, and technical documentation. To explore each part, select a topic from the left-hand sidebar.")
+    st.write("[StarClusterPlot](https://pypi.org/project/StarClusterPlot/0.1.7/) is a Python package published and maintained by [Teerat Chanromyen](https://cosmicdusts.wordpress.com/about/) that helps visualize a star cluster's structure and its Hertzsprung-Russell Diagram with real, calculated color. It is specifically designed to work with data from the [Sloan Digital Sky Survey](https://www.sdss.org/) or any dataset that contains g, r, right ascension, and declination values. This site served as a documentation hub, featuring examples of interactive plots, a package tutorial, and technical documentation. To explore each part, select a topic from the left-hand sidebar.")
     st.write(" ")
     st.image('StarCluster_group.png')
 
