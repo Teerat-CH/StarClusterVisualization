@@ -5,18 +5,17 @@ from StarClusterPlot import ClusterVis, HRDiagram, Temp_to_RGB
 
 st.sidebar.title("Options")
 option = st.sidebar.radio("Select Page", ["Home", "Interactive Plots", "Package Tutorial", "Technical Documentation"])
-st.sidebar.divider()
 
 if option == "Home":
     st.title("StarClusterPlot")
-    st.write("[StarClusterPlot](https://pypi.org/project/StarClusterPlot/0.1.7/) is a Python package created and maintained by [Teerat Chanromyen](https://cosmicdusts.wordpress.com/about/) that helps visualize a star cluster's structure and its Hertzsprung-Russell Diagram with real, calculated color. It is specifically designed to work with data from the [Sloan Digital Sky Survey](https://www.sdss.org/) or any dataset that contains g, r, right ascension, and declination values.")
-    st.write("This site served as a documentation hub, featuring examples of interactive plots, a package tutorial, and technical documentation. To explore each part, select a topic from the left-hand sidebar.")
+    st.write("[StarClusterPlot](https://pypi.org/project/StarClusterPlot/0.1.7/) is a Python package created and maintained by [Teerat Chanromyen](https://cosmicdusts.wordpress.com/about/) that helps visualize a star cluster's structure and its Hertzsprung-Russell Diagram with real, calculated color. It is specifically designed to work with data from the [Sloan Digital Sky Survey](https://www.sdss.org/) or any dataset that contains g, r, right ascension, and declination values. This site served as a documentation hub, featuring examples of interactive plots, a package tutorial, and technical documentation. To explore each part, select a topic from the left-hand sidebar.")
     st.write(" ")
-    st.image('M13_HR.png', caption='Hertzsprung-Russell Diagram of Messier 13')
+    st.image('StarCluster_group.png')
 
 if option == "Interactive Plots":
     st.title("Interactive Plot")
 
+    st.sidebar.subheader("Star cluster's structure/HR-Diagram")
     Cluster = st.sidebar.selectbox('Select Data',('M2', 'M13', 'M15', 'NGC2420', 'NGC5053', 'NGC6791', 'Pal3', 'Pal5', 'Pal14'))
     feature = st.sidebar.multiselect('Select Plots/Data Sample', ["Data Sample", "Star Cluster Structure", "Hertzsprung–Russell Diagram"])
 
@@ -56,7 +55,7 @@ if option == "Interactive Plots":
         st.pyplot(fig)
         st.divider()
 
-    st.sidebar.divider()
+    st.sidebar.subheader("Visualize a star's color from its temperature")
     temp_color_plot = st.sidebar.checkbox("Star's Temperature-Color plot", False)
 
     if temp_color_plot:
@@ -100,8 +99,9 @@ if option == "Package Tutorial":
 
     st.divider()
     st.write(" ")
-    st.write("- If you wish to investigate other star clusters, check out this Sloan Digital Sky Survey tutorial. [link](https://skyserver.sdss.org/dr12/en/proj/advanced/hr/mast.aspx)")
-    st.write('After importing the data as a CSV file, simply delete the first row, and you should be good to go!')
+    st.write("- If you wish to investigate other star clusters, data from the Sloan Digital Sky Survey can be found here. [link](https://classic.sdss.org/dr7/products/value_added/anjohnson08_clusterphotometry.php)")
+    st.write("Use the code below to read the text file from the link.")
+    st.code("data = pd.read_csv('file_name.txt', header=None, delimiter=r'\s+', names='Run Rerun CamCol DAOPHOTID ra dec x_u y_u u uErr chi_u sharp_u flag_u x_g y_g g gErr chi_g sharp_g flag_g x_r y_r r rErr chi_r sharp_r flag_r x_i y_i i iErr chi_i sharp_i flag_i x_z y_z z zErr chi_z sharp_z flag_z'.split(' '))", language='python')
 
     st.write(" ")
     st.write('- CSV file of Messier13, NGC2420, and NGC6791 can be found here: [link](https://github.com/Milne-Centre/ThaiPASS2019/tree/master/DATA_FOR_TASKS)')
