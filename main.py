@@ -17,7 +17,7 @@ if option == "Home":
 if option == "Interactive Plots":
     st.title("Interactive Plot")
 
-    Cluster = st.sidebar.selectbox('Select Data',('M2', 'M13', 'M15' 'NGC2420', 'NGC5053', 'NGC6791', 'Pal3', 'Pal5', 'Pal14'))
+    Cluster = st.sidebar.selectbox('Select Data',('M2', 'M13', 'M15', 'NGC2420', 'NGC5053', 'NGC6791', 'Pal3', 'Pal5', 'Pal14'))
     feature = st.sidebar.multiselect('Select Plots/Data Sample', ["Data Sample", "Star Cluster Structure", "Hertzsprung–Russell Diagram"])
 
     file = str(Cluster) + '.csv'
