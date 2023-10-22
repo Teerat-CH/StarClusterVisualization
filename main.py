@@ -77,7 +77,7 @@ if option == "Package Tutorial":
     st.title("Package Tutorial")
 
     st.write("1.Install the Package")
-    st.code('!pip install StarClusterPlot==0.1.7', language='python')
+    st.code('pip install StarClusterPlot==0.2.0', language='python')
 
     st.write("2.Import package and required libraries")
     code1 = """
@@ -90,7 +90,7 @@ if option == "Package Tutorial":
     st.code("data = pd.read_csv('M13.csv')", language='python')
 
     st.write("- Plot Star Clusters structure; all parameters apart from the dataframe (data) are optional")
-    st.code("ClusterVis(data, x_ratio, y_ratio)", language='python')
+    st.code("ClusterVis(data, x_ratio, y_ratio, minimum_temperature, maximum_temperature)", language='python')
 
     st.write("- Plot Star Clusters HR-Diagram; all parameters apart from the dataframe (data) are optional")
     st.code("HRDiagram(data, left_boun, right_boun, lower_boun, upper_boun, x_ratio, y_ratio)", language='python')
