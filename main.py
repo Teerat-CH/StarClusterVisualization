@@ -33,8 +33,9 @@ if option == "Interactive Plots":
         st.subheader("Star Cluster Structure")
         x_ratio_s = st.slider("X Axis ratio", min_value=1.0, max_value=10.0, value=6.75, key=3)
         y_ratio_s = st.slider("Y Axis ratio", min_value=4.0, max_value=20.0, value=12.0, key=4)
+        temperature = st.slider('Select Minimum and Maximum Temperature', 1667, 26000, (1667, 26000))
 
-        fig = ClusterVis(data, x_ratio_s, y_ratio_s)
+        fig = ClusterVis(data, x_ratio_s, y_ratio_s, temperature[0], temperature[1])
         st.pyplot(fig)
         st.divider()
 
